@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+
+    <!-- Title -->
+    <title>Employees</title>
+</head>
+
+
+<body>
+    <div class="container">
+
+    <!-- Title -->
+    <h3>Employees Table</h3>
+    <hr/>
+    <!-- Add Button -->
+    <a th:href="@{/employees/form}" class="btn btn-primary btn-sm mb-3" >Add Employee</a>
+    <!-- Table -->
+    <table class="table table-bordered table-stripled">
+        <!-- Table Header -->
+        <thead class="thead-dark">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <!-- TableBody -->
+        <tbody>
+            <tr th:each="data : ${employees}">
+                <td th:text="${data.firstName}"/>
+                <td th:text="${data.lastName}"/>
+                <td th:text="${data.email}"/>
+                <td>
+                    <a th:href="@{/employees/formupdate(id=${data.id})}" class="btn btn-info btn-sm">Update</a>
+                    <a th:href="@{/employees/delete(id=${data.id})}" class="btn btn-danger btn-sm ml-3"
+                    onclick="if(!confirm('Are you sure you want to delete this employee?')) return false"
+                    >Delete</a>                  
+
+                </td>
+            </tr>
+        </tbody>
+
+
+    </table>
+
+    </div>
+
+    
+
+</body>
+</html>
