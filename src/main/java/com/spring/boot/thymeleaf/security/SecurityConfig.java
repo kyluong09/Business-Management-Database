@@ -8,21 +8,26 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 
 
+@Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth.inMemoryAuthentication().withUser("admin").password("{noop}admin123!").roles("ADMIN");
+		
 		
 	}
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/").anonymous()
-		.anyRequest().authenticated()
+	
+		http.authorizeRequests().antMatchers("/").permitAll()
+		.antMatchers("/api/**").authenticated()
+		.antMatchers("/employees/**").authenticated()
 		.and()
-		.formLogin().permitAll()
+		.formLogin().loginPage("/login").permitAll()
 		.and()
 		.logout().permitAll();
 		

@@ -1,0 +1,16 @@
+
+    .root
+       {
+        display: table; width: 100%;
+    }
+
+    .left-side {
+        display: table-row-group; 
+        height:100vh;
+        
+    }
+	
+	.content{
+       display: table-header-group;
+       height: 100vh
+    }

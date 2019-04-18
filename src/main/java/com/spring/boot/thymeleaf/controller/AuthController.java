@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AuthController {
 	
 	
-//	@RequestMapping("/login")
-//	public String login() {
-//		
-//		return "auth/login";
-//		
-//	}
+	@RequestMapping("/login")
+	public String login() {
+		
+		return "auth/login";
+		
+	}
 
 }
