@@ -30,7 +30,7 @@ public class EmployeeController {
 	 */
 	@GetMapping("/list")
 	public String showListEmployees(Model model) {
-		List<Employee> employees = service.findAll();
+		List<Employee> employees = service.findAllEmployee();
 		model.addAttribute("employees",employees);
 		
 		

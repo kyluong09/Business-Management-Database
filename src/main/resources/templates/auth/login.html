@@ -5,50 +5,101 @@
     <title>
         Login
     </title>
-     <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        
-        <link rel="stylesheet" th:href="@{/css/login.css}"/>
+    <!-- Reference Bootstrap files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+        integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <link rel="stylesheet" th:href="@{/css/login.css}" />
 </head>
 
 <body>
 
-          <!-- Navigation -->
-          
 
-    <div th:if = "${param.error}">
-         Invalid username and password.
+
+
+
+
+    <!-- Login Form -->
+    <div class="center">
+        <div class="container">
+
+            <!-- Casrd -->
+            <div class="card">
+                <!-- Card Header -->
+                <div class="card-header bg-primary">
+                    <b>LOGIN</b>
+                </div>
+                <div class="card-body" style="padding: 25px">
+                    <div>
+                        <div class="alert alert-danger" role="alert" th:if="${param.error}">
+                      
+                            Invalid username and password.
+                        </div>
+                        <div class="alert alert-info" role="alert" th:if="${param.logout}">
+                            You have been logged out.
+                        </div>
+                    </div>
+
+                    <form class="border p-5" th:action="@{/login}" method="POST">
+                        <!-- Username -->
+                        <label for="username">
+                            Username
+                        </label>
+                        <div class="input-group" style="margin-bottom:25px">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input class="form-control" type="text" placeholder="Username" name="username">
+                        </div>
+
+                        <!-- Password -->
+                        <label for="password">Password</label>
+                        <div class="input-group" style="margin-bottom:25px">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input class="form-control" type="password" placeholder="Password" name="password">
+                        </div>
+                        <div style="text-align: center; margin-bottom: 25px">
+                            <!-- Submit Button -->
+                            <input type="submit" class="btn btn-primary btn-block" value="Login">
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
     </div>
-    <div th:if = "${param.logout}">
-         You have been logged out.
-    </div>
-    
-
-    <form th:action="@{/login}" method="POST">
-
-        <input type="text" placeholder="Username" name="username">
-        <br/>
-        <input type="password" placeholder="Password" name="password">
-        <br/>
-        <input type="submit" value="Login">
 
 
 
 
-    </form>
-
-
-   
-   
 
 
 
 
-   
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>

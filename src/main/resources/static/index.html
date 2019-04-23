@@ -8,7 +8,9 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Profile</title>
+  <title>Ky Luong</title>
+  <!-- FaviIcon -->
+<link rel="shortcut icon" href="img/fav_icon.ico"/>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +29,6 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger mt-5" href="#page-top">
-      <span class="d-block d-lg-none">KY G LUONG</span>
       <span class="d-none d-lg-block">
         <img class="img-fluid img-profile rounded-circle mx-auto mb-5" src="img/profile.jpg" alt="">
       </span>
@@ -46,7 +47,7 @@
           <a class="nav-link js-scroll-trigger" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          <a class="nav-link js-scroll-trigger" href="#experience">Experiences</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#education">Education</a>
@@ -65,8 +66,8 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
       <div class="w-100">
-        <h1 class="mb-0">Ky
-          <span>Luong</span>
+        <h1 class="mb-0">Ky G
+          <span style="color:#942c2c">Luong</span>
         </h1>
         <div class="subheading mb-5">Racine, WI 53406 · (262) 664-9054 ·
           <a href="mailto:kyluong09@gmail.com">kyluong09@gmail.com</a>
@@ -84,12 +85,13 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
       <div class="w-100">
-        <h2 class="mb-5">Experience</h2>
+        <h2 class="title-section mb-5">Experiences</h2>
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
             <h3 class="mb-0">Software Engineer</h3>
-            <div class="subheading mb-3">App Factory (UW-Parkside)</div>
+            <div class="subheading">App Factory (UW-Parkside)</div>
+            <div class="mb-3"><b>Location:</b> Kenosha, Wisconsin</div>
             <p> 
                 - Analyze users’ needs and then design, test, and develop software to meet those needs.
                 <br/>
@@ -107,10 +109,29 @@
 
             </p>
           </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September - 2017 - Present</span>
+          <div class="resume-date">
+            <span class="text-primary">September, 2017 - Present</span>
           </div>
         </div>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Caregiver</h3>
+            <div class="subheading">Racine Common Assisted Living</div>
+            <div class="mb-3"><b>Location:</b> Racine, Wisconsin</div>
+            <p> 
+                - Emotional support, health monitor.
+                <br/>
+                - Problem solving, time management.
+                <br/>
+                - Ability to follow set rules and protocol.
+
+            </p>
+          </div>
+          <div class="resume-date">
+            <span class="text-primary">November, 2016 - Present</span>
+          </div>
+        </div>
+
 
     
 
@@ -124,7 +145,7 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
       <div class="w-100">
-        <h2 class="mb-5">Education</h2>
+        <h2 class="title-section mb-5">Education</h2>
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
@@ -133,7 +154,7 @@
             <div>Computer Science</div>
             <div>Mobile Development</div>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="resume-date">
             <span class="text-primary">September - 2015 - May 2019</span>
           </div>
         </div>
@@ -145,14 +166,14 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
       <div class="w-100">
-        <h2 class="mb-5">Skills</h2>
+        <h2 class="title-section mb-5">Skills</h2>
 
 
         <div>
 
             <div class="row">
-                <div class="col-5">
-                     <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+                <div class="col-md-3">
+                     <h4>Programming Languages &amp; Tools</h4>
         <ul class="fa-inline mb-4">
             <li>
                 Java
@@ -168,6 +189,12 @@
             </li>
             <li>
                 Spring MVC
+            </li>
+            <li>
+                Spring REST
+            </li>
+            <li>
+                JPA/Hibernate
             </li>
             <li>
                 Firebase
@@ -199,8 +226,8 @@
         </ul>
                 </div>
 
-                <div class="col-5">
-                     <div class="subheading mb-3">Integrated Development Environment - IDE</div>
+                <div class="col-md-4 mr-4">
+                     <h4>Integrated Development Environment - IDE</h4>
         <ul class="fa-inline mb-4">
           <li>
             IntelliJ
@@ -218,8 +245,8 @@
            
         </ul>
 
-        <div class="subheading mb-3">Project Management Tools</div>
-        <ul class="fa-inline mb-0">
+        <h4>Project Management Tools</h4>
+        <ul class="fa-inline mb-4">
           <li>
             GIT
           </li>
@@ -230,11 +257,42 @@
               
            
         </ul>
+
         
+        
+                </div>
+
+                <div class="col-md-4">
+
+                        <h4>Others</h4>
+        <ul class="fa-inline mb-0">
+          <li>
+            Object-Oriented Programming - OOP
+          </li>
+          <li>
+            Aspect-Oriented Programming - AOP
+          </li>
+              <li>
+            Agile/Scrum Methodology 
+              </li>
+
+              <li>
+            UI/UX Design
+              </li>
+                <li>
+            JUnit Testing
+              </li>
+           
+              
+           
+        </ul>
+
                 </div>
             </div>
 
         </div>
+
+        
 
        
 
@@ -247,7 +305,7 @@
          <hr class="m-0">
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
       <div class="w-100">
-        <h2 class="mb-5">Projects</h2>
+        <h2 class="title-section mb-5">Projects</h2>
 
        
           <div class="resume-content mb-5">
@@ -265,7 +323,7 @@
           
           </div>
 
-            <div class="resume-content mb-5">,
+            <div class="resume-content mb-5">
              <div class="subheading">Android Developer</div>
             <h3 class="mb-0">Supplement Snoop</h3>
             <a href="https://play.google.com/store/apps/details?id=com.supplementsnoop.supplementsnoop">Google Play</a>

@@ -6,7 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.spring.boot.thymeleaf.dao.CustomerRepository;
 import com.spring.boot.thymeleaf.dao.EmployeeRepository;
+import com.spring.boot.thymeleaf.entity.Customer;
 import com.spring.boot.thymeleaf.entity.Employee;
 
 @Service
@@ -14,10 +16,20 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	@Autowired
 	private EmployeeRepository employeeRepository;
+	
+	@Autowired
+	private CustomerRepository customerRepository;
+	
 
 	@Override
-	public List<Employee> findAll() {
-		return employeeRepository.findAllByOrderByLastNameAsc();
+	public List<Employee> findAllEmployee() {
+		return employeeRepository.findAll();
+	}
+	
+
+	@Override
+	public List<Customer> findAllCustomer() {
+		return customerRepository.findAll();
 	}
 
 	@Override
@@ -33,6 +45,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 		}else {
 			throw new RuntimeException("Employee id is not found: "+ id);
 		}
+		
+
 	}
 
 	@Override
