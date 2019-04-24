@@ -1,7 +1,5 @@
 package com.spring.boot.thymeleaf;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -23,12 +21,6 @@ public class Runner  implements CommandLineRunner{
 
 		
 		
-		
-		
-		Customer customer = new Customer("ky","luong","12121",new Address());
-		customer.addOrder(new Order());
-		
-		service.saveCustomer(customer);
 		
 	
 		

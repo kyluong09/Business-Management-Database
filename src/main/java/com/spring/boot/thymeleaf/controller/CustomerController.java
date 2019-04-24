@@ -38,7 +38,6 @@ public class CustomerController {
 		Address address = new Address();
 
 		model.addAttribute("customer", customer);
-		model.addAttribute("address", address);
 
 		return "customer/customer-form";
 	}
@@ -51,6 +50,30 @@ public class CustomerController {
 		}
 
 		return "redirect:/customer";
+	}
+	
+	@GetMapping("/update")
+	public String processUpdate(@RequestParam int id, Model model) {
+		// Get data from database
+		Customer customer = service.findCustomerById(id);
+
+		
+		model.addAttribute("customer",customer);
+		
+
+		return "customer/customer-form";
+	}
+	
+	@GetMapping("/search")
+	public String processSearch(@RequestParam("searchName") String searchName, Model model) {
+		// Get data from database
+		List<Customer> customerList = service.findCustomerByNAME(searchName);
+
+		
+		model.addAttribute("customerList",customerList);
+		
+
+		return "customer/customer";
 	}
 	
 	@GetMapping("/delete")

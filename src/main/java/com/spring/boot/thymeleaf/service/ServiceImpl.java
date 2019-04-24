@@ -57,6 +57,22 @@ public class ServiceImpl implements CrudService {
 
 	}
 	
+	// FIND BY NAME
+	
+	@Override
+	public List<Customer> findCustomerByNAME(String name) {
+		String tempName = name.trim();
+		return customerRepository.findByName(tempName);
+	}
+
+	@Override
+	public List<Product> findProductByName(String name) {
+		return productRepository.findByName(name);
+	}
+
+	
+	
+	
 	@Override
 	public Product findProductById(int id) {
 		// Optional variable
@@ -113,5 +129,9 @@ public class ServiceImpl implements CrudService {
 		}
 
 	}
+	
+	
+	
+	
 
 }

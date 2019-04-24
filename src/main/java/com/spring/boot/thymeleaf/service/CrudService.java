@@ -15,6 +15,10 @@ public interface CrudService {
 	// FIND BY ID
 	public Customer findCustomerById(int id);
 	public Product findProductById(int id);
+	
+	// FIND BY NAME
+	public List<Customer> findCustomerByNAME(String name);
+	public List<Product> findProductByName(String name);
 
 	// CREATE 
 	public void saveCustomer(Customer customer);

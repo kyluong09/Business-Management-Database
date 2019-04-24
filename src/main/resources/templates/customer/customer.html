@@ -44,8 +44,8 @@
 
                             <div>
                                 <!--  Search Customer -->
-                                <form th:action="@{search}" method="GET">
-                                    <input type="text" placeholder=" Search customer">
+                                <form id="search_form" th:action="@{/customer/search}" method="GET">
+                                    <input type="text" name="searchName" placeholder=" Search customer">
                                 </form>
                             </div>
 
@@ -64,7 +64,7 @@
 
                 <!-- Table -->
                 <div class="table-responsive">
-                    <table class="table table-stripled">
+                    <table class="table table-striped">
                         <!-- Table header -->
                         <thead>
                             <tr>
@@ -118,7 +118,9 @@
 
 
 
-
+<script>
+ 
+</script>
 
 
 </body>
