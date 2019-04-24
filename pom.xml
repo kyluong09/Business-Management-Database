@@ -8,11 +8,11 @@
 		<version>2.1.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.spring.boot.thymeleaf</groupId>
-	<artifactId>springbootapp</artifactId>
+	<groupId>com.business.management</groupId>
+	<artifactId>businessmanagement</artifactId>
 	<version>1.1.6</version>
-	<name>Spring-Boot-Thymeleaf</name>
-	<description>Spring Boot with Thymeleaf</description>
+	<name>Business-Management</name>
+	<description>Manage Business Data</description>
 
 	<properties>
 		<java.version>1.8</java.version>
