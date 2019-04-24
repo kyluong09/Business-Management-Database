@@ -28,7 +28,7 @@ public class Product {
 	private double price;
 	
 	@ManyToMany(cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST,CascadeType.REFRESH})
-	@JoinTable(name="order", joinColumns=@JoinColumn(name="product_id"), inverseJoinColumns=@JoinColumn(name="customer_id"))
+	@JoinTable(name="order_item", joinColumns=@JoinColumn(name="product_id"), inverseJoinColumns=@JoinColumn(name="order_id"))
 	private List<Customer> customerList;
 	
 	public Product() {

@@ -1,16 +1,18 @@
 package com.spring.boot.thymeleaf.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -26,10 +28,14 @@ public class Customer {
 	private String lastName;
 	@Column(name="phone_number")
 	private String phoneNumber;
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="address_id")
+	private Address address;
 	
-	@ManyToMany(cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST,CascadeType.REFRESH})
-	@JoinTable(name="order", joinColumns=@JoinColumn(name="customer_id"), inverseJoinColumns=@JoinColumn(name="product_id"))
-	private List<Product> productList;
+	@OneToMany(fetch=FetchType.EAGER,mappedBy="customer", cascade=CascadeType.ALL)
+	private List<Order> orderList;
+	
+	
 	
 	public Customer() {
 		
@@ -37,11 +43,20 @@ public class Customer {
 	
 	
 
-	public Customer(String firstName, String lastName, String phoneNumber) {
+	
+
+
+
+	public Customer(String firstName, String lastName, String phoneNumber, Address address) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phoneNumber = phoneNumber;
+		this.address = address;
 	}
+
+
+
+
 
 
 
@@ -76,6 +91,47 @@ public class Customer {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+
+		
+
+	public Address getAddress() {
+		return address;
+	}
+
+
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+
+
+	
+
+
+
+	public List<Order> getOrderList() {
+		return orderList;
+	}
+
+
+
+	public void setOrderList(List<Order> orderList) {
+		this.orderList = orderList;
+	}
+	
+	
+	public void addOrder(Order order) {
+		if(orderList == null) {
+			orderList = new ArrayList<>();
+		}
+		
+		orderList.add(order);
+		order.setCustomer(this);
+		
+	}
+	
+	
 
 
 
