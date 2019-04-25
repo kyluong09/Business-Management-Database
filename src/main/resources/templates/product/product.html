@@ -57,7 +57,7 @@
 
                             <div>
                                 <!--  Search Customer -->
-                                <form id="search_form" th:action="@{/customer/search}" method="GET">
+                                <form id="search_form" th:action="@{/product/search}" method="GET">
                                     <input type="text" name="searchName" placeholder=" Search customer">
                                 </form>
                             </div>
@@ -101,7 +101,7 @@
                             <tr th:each=" product : ${productList}">
                                 <td th:text="${product.productName}" />
                                 <td th:text="${product.brandName}" />
-                                <td th:text="${product.price}" />
+                                <td> $<span th:text="${#numbers.formatDecimal(product.price,0,2)}"/></td>
                                 <td>
                                     <!-- Pass id to url -->
                                     <a th:href="@{/product/delete(id=${product.id})}"

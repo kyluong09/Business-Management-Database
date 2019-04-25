@@ -1,5 +1,6 @@
 package com.business.management.controller;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,20 +11,21 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.business.management.entity.Address;
-import com.business.management.entity.Customer;
 import com.business.management.entity.Product;
 import com.business.management.service.ServiceImpl;
 
 @Controller
 @RequestMapping("product")
 public class ProductController {
+	
+	
+	
 
 	@Autowired
 	private ServiceImpl service;
 
 	@GetMapping("")
-	public String showCustomer(Model model) {
+	public String showProduct(Model model) {
 		List<Product> productList = service.findAllProduct();
 
 		model.addAttribute("productList", productList);
@@ -51,23 +53,25 @@ public class ProductController {
 
 		return "redirect:/product";
 	}
-//	
-//	@GetMapping("/update")
-//	public String processUpdate(@RequestParam int id, Model model) {
-//		// Get data from database
-//		Customer customer = service.findCustomerById(id);
-//
-//		
-//		model.addAttribute("customer",customer);
-//		
-//
-//		return "customer/customer-form";
-//	}
-//	
+	
+	@GetMapping("/update")
+	public String processUpdate(@RequestParam int id, Model model) {
+		// Get data from database
+		Product product = service.findProductById(id);
+
+		
+		model.addAttribute("product",product);
+		
+
+		return "product/product-form";
+	}
+	
 	@GetMapping("/search")
 	public String processSearch(@RequestParam("searchName") String searchName, Model model) {
+		String tempName = searchName.trim();
+		
 		// Get data from database
-		List<Product> productList = service.findProductByName(searchName);
+		List<Product> productList = service.findProductByName(tempName);
 
 		
 		model.addAttribute("productList",productList);
