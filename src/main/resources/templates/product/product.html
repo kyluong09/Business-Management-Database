@@ -27,12 +27,98 @@
 <body>
     <!-- Navigation Header -->
     <div th:insert="component/nav_header" />
-    <!-- Navgation Side-->
-    <div th:insert="component/nav_side" />
+
+    <div class="container-fluid root">
+        <div class="row">
+            <!-- Navgation Side-->
+
+            <div class="col-sm-2 left-side border">
+                <div th:insert="component/nav_side" />
+            </div>
+            <!-- Content -->
+            <div class="col-sm right-side border">
+                <div class="container-fluid">
+                    <div class="row my-3 justify-content-between">
+
+                        <div class="col-md-3">
+
+                            <div>
+                                <!--  Search Customer -->
+                                <form id="search_form" th:action="@{/customer/search}" method="GET">
+                                    <input type="text" name="searchName" placeholder=" Search customer">
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4  text-right">
+                            <!-- Add Customer Button -->
+                            <a th:href="@{/product/form}" class="btn btn-primary btn-sm">
+                                Add Customer
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <!-- Table header -->
+                        <thead>
+                            <tr>
+                                <th>
+                                    Product Name
+                                </th>
+                                <th>
+                                    Brand Name
+                                </th>
+                                <th>
+                                    Price
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <!-- Table Body -->
+                        <tbody>
+                            <!-- Loop through customer list -->
+                            <tr th:each=" product : ${productList}">
+                                <td th:text="${product.productName}" />
+                                <td th:text="${product.brandName}" />
+                                <td th:text="${product.price}" />
+                                <td>
+                                    <!-- Pass id to url -->
+                                    <a th:href="@{/customer/delete(id=${product.id})}"
+                                        class="btn btn-danger btn-sm text-white">Delete</a>
+                                    <a th:href="@{/customer/update(id=${product.id})}"
+                                        class="btn btn-secondary btn-sm text-white">Edit</a>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
 
 
 
 
+
+    </div>
+
+
+
+    <script>
+
+    </script>
 
 
 </body>
