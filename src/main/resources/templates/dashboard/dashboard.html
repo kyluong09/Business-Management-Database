@@ -4,19 +4,8 @@
 
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" th:href="@{/css/main.css}">
-
-
-
-
+    <!-- Bootstrap, CSS -->
+    <div th:insert="@{imported_file}"></div>
 
 
     <!-- Title -->
@@ -24,7 +13,7 @@
 </head>
 
 
-<body>
+<body class="bg-light" >
     <!-- Navigation Header -->
     <div th:insert="component/nav_header" />
 
@@ -32,19 +21,83 @@
         <div class="row">
             <!-- Navgation Side-->
 
-            <div class="col-sm-2 left-side border">
-                <div th:insert="component/nav_side" />
+            <div class="col-sm-2 left-side bg-dark">
+
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item mt-2">
+                        <a class="nav-link active text-white" th:href="@{/dashboard}">
+                            <i class="fas fa-home"></i>
+                            Dashboard <span class="sr-only"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" th:href="@{/customer}">
+                            <i class="fas fa-users"></i>
+
+                            Customers
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" th:href="@{/product}">
+                            <i class="fas fa-tshirt"></i>
+                            Products
+                        </a>
+                    </li>
+                </ul>
             </div>
             <!-- Content -->
             <div class="col-sm right-side border">
+                <!-- First Row -->
+                <div class="row justify-content-center">
+                    
+                    <div class="col">
+                        <div class="card text-center p-3 my-3 mx-4">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>Total Customers</h4>
+                                </div>
+                                <div class="card-text display-3 text-info">
+                                    <span th:text="${customerSize}"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center p-3 my-3 mx-4 ">
+                            <div class="card-body">
+                                <div class="card-title ">
+                                    <h4>Total Products</h4>
+                                </div>
+                                <div class="card-text display-3 text-info">
+                                    <span th:text="${productSize}"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center p-3 my-3 mx-4 ">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>Total Orders</h4>
+                                </div>
+                                <div class="card-text display-3 text-info">
+                                    0
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
-
-
         </div>
 
+
+
     </div>
+
+
 
 
 

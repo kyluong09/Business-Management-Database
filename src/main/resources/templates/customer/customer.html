@@ -4,18 +4,8 @@
 
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" th:href="@{/css/main.css}">
-
-
-
+    <!-- Bootstrap, CSS -->
+    <div th:insert="@{imported_file}"></div>
 
 
 
@@ -32,8 +22,30 @@
         <div class="row">
             <!-- Navgation Side-->
 
-            <div class="col-sm-2 left-side border">
-                <div th:insert="component/nav_side" />
+            <div class="col-sm-2 left-side  bg-dark">
+
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item mt-2">
+                        <a class="nav-link text-white" th:href="@{/dashboard}">
+                            <i class="fas fa-home"></i>
+
+                            Dashboard <span class="sr-only"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" th:href="@{/customer}">
+                            <i class="fas fa-users"></i>
+                            Customers
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" th:href="@{/product}">
+                            <i class="fas fa-tshirt"></i>
+                            Products
+                        </a>
+                    </li>
+                </ul>
             </div>
             <!-- Content -->
             <div class="col-sm right-side border">
@@ -95,8 +107,10 @@
                                 <td th:text="${customer.address}" />
                                 <td>
                                     <!-- Pass id to url -->
-                                    <a th:href="@{/customer/delete(id=${customer.id})}" class="btn btn-danger btn-sm text-white">Delete</a>
-                                    <a th:href="@{/customer/update(id=${customer.id})}" class="btn btn-secondary btn-sm text-white">Edit</a>
+                                    <a th:href="@{/customer/delete(id=${customer.id})}"
+                                        class="btn btn-danger btn-sm text-white">Delete</a>
+                                    <a th:href="@{/customer/update(id=${customer.id})}"
+                                        class="btn btn-secondary btn-sm text-white">Edit</a>
                                 </td>
                             </tr>
 
@@ -118,9 +132,9 @@
 
 
 
-<script>
- 
-</script>
+    <script>
+
+    </script>
 
 
 </body>

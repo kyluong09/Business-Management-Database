@@ -64,25 +64,25 @@ public class ProductController {
 //		return "customer/customer-form";
 //	}
 //	
-//	@GetMapping("/search")
-//	public String processSearch(@RequestParam("searchName") String searchName, Model model) {
-//		// Get data from database
-//		List<Customer> customerList = service.findCustomerByNAME(searchName);
-//
-//		
-//		model.addAttribute("customerList",customerList);
-//		
-//
-//		return "customer/customer";
-//	}
-//	
-//	@GetMapping("/delete")
-//	public String processDelete(@RequestParam int id) {
-//
-//		// Delete
-//		service.deleteCustomerById(id);
-//
-//		return "redirect:/customer";
-//	}
+	@GetMapping("/search")
+	public String processSearch(@RequestParam("searchName") String searchName, Model model) {
+		// Get data from database
+		List<Product> productList = service.findProductByName(searchName);
+
+		
+		model.addAttribute("productList",productList);
+		
+
+		return "product/product";
+	}
+	
+	@GetMapping("/delete")
+	public String processDelete(@RequestParam int id) {
+
+		// Delete
+		service.deleteProductById(id);
+
+		return "redirect:/product";
+	}
 
 }
