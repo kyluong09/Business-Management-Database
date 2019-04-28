@@ -1,4 +1,4 @@
-package com.spring.boot.thymeleaf;
+package com.business.management;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringBootThymeleafApplicationTests {
+public class BusinessManagementApplicationTests {
 
 	@Test
 	public void contextLoads() {
