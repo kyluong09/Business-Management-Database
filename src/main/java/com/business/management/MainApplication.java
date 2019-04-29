@@ -8,10 +8,10 @@ import com.business.management.service.CrudService;
 import com.business.management.service.ServiceImpl;
 
 @SpringBootApplication
-public class SpringBootThymeleafApplication {
+public class MainApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootThymeleafApplication.class, args);
+		SpringApplication.run(MainApplication.class, args);
 		
 		
 	}
