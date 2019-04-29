@@ -7,14 +7,14 @@ BMDB is a full-stack template with combination of Java | Maven | Spring Framewor
 
 
 # Technologies
-- [Spring Framework](https://spring.io/) (Core, Spring Boot, Spring MVC, Spring REST, Spring Security, JPA)
-- [Java SE 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - Runtime Enviroment
-- [Apache Maven](https://maven.apache.org/) - Build automation tool
-- [Bootstrap](https://getbootstrap.com/) - CSS & Javacript template
-- [MySQL](https://www.mysql.com/) - SQL database management system
-- [Apache Maven](https://maven.apache.org/) - Build automation tool
-- [Thymleaf](https://www.thymeleaf.org/) - Java XML/XHTML/HTML5 template Engine
-
+  - [Spring Framework](https://spring.io/) (Core, Spring Boot, Spring MVC, Spring REST, Spring Security, JPA)
+  - [Java SE 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - Runtime Enviroment
+  - [Apache Maven](https://maven.apache.org/) - Build automation tool
+  - [Bootstrap](https://getbootstrap.com/) - CSS & Javacript template
+  - [MySQL](https://www.mysql.com/) - SQL database management system
+  - [Apache Maven](https://maven.apache.org/) - Build automation tool
+  - [Thymleaf](https://www.thymeleaf.org/) - Java XML/XHTML/HTML5 template Engine
+  
 # Installation
 #### GIT
 DMDB requires [Java SE 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)+ and  [Maven](https://maven.apache.org/) to run
