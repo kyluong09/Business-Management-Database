@@ -67,6 +67,7 @@ In order for this application to work, we need to set up a database with MySQL W
 - Execute the script
 ```
 
+
 #### Application Properties
 ###### ../Business-Management-Database/src/main/resources/
 After finish setting up MySQL Workbench, change ``spring.database.username/password`` value with Workbench ``username/password``
@@ -84,6 +85,9 @@ spring.security.user.name=admin
 spring.security.user.password=password
 spring.security.user.roles="ADMIN"
 ```
+``
+NOTE: Without MySQL database and Application Properties set up, it would causes SPRING BOOT BUILD FAIL
+``
 
 
 
