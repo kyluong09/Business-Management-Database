@@ -2,7 +2,7 @@
 
 BMDB is a full-stack template with combination of Java | Maven | Spring Framework. This can be used for starter to create a complete build-in business structure, CRUD operations, authentication, Restful API.
 
-** Project's for education purposes at University of Wisconsin - Parkside
+``Project's for education purposes at University of Wisconsin - Parkside``
 
 # Contents
 1. [Technologies](#technologies)
