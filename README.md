@@ -45,14 +45,11 @@ username: admin
 password: password
 ```
 
-
-
-
 the application will run but it won't be able to interact with database unti you're done with following step`` 
-#### MySQL Workbench
+### MySQL Workbench
 In order for this application to work, we need to set up a database with MySQL Workbench and SQL script which is included inside project directory
 ```
-- Set up new connection localhost with new username/password
+- Connect MySQL Workbench with root username/password
 - Open SQL script from directory ../Business-Management/sql_script
 - Execute the script
 ```
