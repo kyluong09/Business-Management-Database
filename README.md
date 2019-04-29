@@ -46,7 +46,6 @@ Please make sure have all these requirements before run an application
 
 ```sh
 $ git clone https://github.com/kyluong09/Business-Management.git
-$ cd <dir name> 
 ```
 
 ### MySQL Workbench
