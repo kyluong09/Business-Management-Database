@@ -6,11 +6,12 @@ BMDB is a full-stack template with combination of Java | Maven | Spring Framewor
 
 # Contents
 1. [Technologies](#technologies)
+1. [Dependencies](#dependencies)
 2. [Getting Started](#getting-started)
 3. [Prerequisties](#prerequisties)
 4. [Installation](#installation)
 5. [MySQL Workbench](#mysql-workbench)
-6. [Dependencies](#dependencies)
+6. [Docker](#docker)
 7. [License](#license)
 
 
@@ -20,7 +21,7 @@ BMDB is a full-stack template with combination of Java | Maven | Spring Framewor
   - [Bootstrap](https://getbootstrap.com/) - CSS & Javacript template
   - [MySQL](https://www.mysql.com/) - SQL database management system
   - [Thymleaf](https://www.thymeleaf.org/) - Java XML/XHTML/HTML5 template Engine
-#### Dependencies
+### Dependencies
 
 | Dependency | MVNRepository |
 | ------ | ------ |
