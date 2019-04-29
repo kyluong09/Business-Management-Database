@@ -47,18 +47,8 @@ Please make sure have all these requirements before run an application
 ```sh
 $ git clone https://github.com/kyluong09/Business-Management.git
 $ cd <dir name> 
-$ mvn clean package 
-$ java -jar target/app.jar
-
-Enter http://localhost:8080 on BROWSER
-```
-```
-There is authentication layer, you need to login with default username/password
-username: admin
-password: password
 ```
 
-the application will run but it won't be able to interact with database unti you're done with following step`` 
 ### MySQL Workbench
 In order for this application to work, we need to set up a database with MySQL Workbench and SQL script which is included inside project directory
 ```
@@ -88,6 +78,20 @@ spring.security.user.roles="ADMIN"
 ``
 NOTE: Without MySQL database and Application Properties set up, it would causes SPRING BOOT BUILD FAIL
 ``
+#### Run
+```sh
+$ cd <dir name>
+$ mvn clean package 
+$ java -jar target/app.jar
+
+Enter http://localhost:8080 on BROWSER
+```
+
+```
+There is authentication layer, you need to login with default username/password
+username: admin
+password: password
+```
 
 
 
