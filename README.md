@@ -4,6 +4,25 @@ BMDB is a full-stack template with combination of Java | Maven | Spring Framewor
 
 ** Project's for education purposes at University of Wisconsin - Parkside
 
+# Contents
+1. [Technologies](#technologies)
+2. [Getting Started](#getting-started)
+3. [Prerequisties](#prerequisties)
+4. [Installation](#installation)
+5. [MySQL Workbench](#mysql-workbench)
+6. [Dependencies](#dependencies)
+7. [License](#license)
+
+
+# Technologies
+  - [Spring Framework](https://spring.io/) (Core, Spring Boot, Spring MVC, Spring REST, Spring Security, JPA)
+  - [Apache Maven](https://maven.apache.org/) - Build automation tool
+  - [Bootstrap](https://getbootstrap.com/) - CSS & Javacript template
+  - [MySQL](https://www.mysql.com/) - SQL database management system
+  - [Thymleaf](https://www.thymeleaf.org/) - Java XML/XHTML/HTML5 template Engine
+
+
+
 # Getting Started
 ### Prerequisties
 Please make sure have all these requirements before run an application
@@ -65,13 +84,8 @@ $ docker run -p 8080:8080 kyluong09/business-management-database
 Go to http://localhost:8080
 ```
 
-# Technologies
-  - [Spring Framework](https://spring.io/) (Core, Spring Boot, Spring MVC, Spring REST, Spring Security, JPA)
-  - [Apache Maven](https://maven.apache.org/) - Build automation tool
-  - [Bootstrap](https://getbootstrap.com/) - CSS & Javacript template
-  - [MySQL](https://www.mysql.com/) - SQL database management system
-  - [Thymleaf](https://www.thymeleaf.org/) - Java XML/XHTML/HTML5 template Engine
-#### Dependencies
+
+# Dependencies
 
 | Dependency | MVNRepository |
 | ------ | ------ |
