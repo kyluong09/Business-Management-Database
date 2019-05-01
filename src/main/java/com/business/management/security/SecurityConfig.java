@@ -40,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/").permitAll()
 		.antMatchers("/dashboard/**").authenticated()
 		.antMatchers("/product/**").authenticated()
-		.antMatchers("/customer/**").hasRole("ADMIN")
+		.antMatchers("/customer/**").authenticated()
 		.antMatchers("/api/**").authenticated()
 		.antMatchers("/employees/**").authenticated()
 		.and().exceptionHandling().accessDeniedPage("/access-denied")
