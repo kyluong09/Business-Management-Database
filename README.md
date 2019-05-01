@@ -71,13 +71,6 @@ spring.datasource.url=jdbc:mysql://localhost:3306/Business_Management_Database
 spring.datasource.username= <MySQL Workbench connection USERNAME>
 spring.datasource.password= <MySQL Workbench connection PASSWORD>
 ```
-You can also change login username/password in ``application.properties`` file
-```
-<!--Authentication Properties-->
-spring.security.user.name=admin 
-spring.security.user.password=password
-spring.security.user.roles="ADMIN"
-```
 ``
 NOTE: Without MySQL database and Application Properties set up, it would causes SPRING BOOT BUILD FAIL
 ``
