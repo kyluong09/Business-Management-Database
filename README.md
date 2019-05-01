@@ -1,7 +1,7 @@
 <h1 style="font-weight:normal">
   Business Management Database
   <a href="https://github.com/sourcerer-io/sourcerer-app/releases"><img src=https://img.shields.io/badge/Version-1.1.8-brightgreen.svg></a>
-  <a href="https://github.com/sourcerer-io/sourcerer-app/blob/master/LICENSE.md"><img src=https://img.shields.io/github/license/sourcerer-io/sourcerer-app.svg?colorB=ff0000></a>
+  <a href="https://github.com/kyluong09/Business-Management-Database/blob/master/LICENSE"><img src=https://img.shields.io/github/license/sourcerer-io/sourcerer-app.svg?colorB=ff0000></a>
 </h1>
 
 BMDB is a full-stack template with combination of Java | Maven | Spring Framework. This can be used for starter to create a complete build-in business structure, CRUD operations, authentication, Restful API.
