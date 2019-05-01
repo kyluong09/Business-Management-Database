@@ -4,9 +4,11 @@ import java.util.List;
 
 import com.business.management.entity.Customer;
 import com.business.management.entity.Product;
+import com.business.management.entity.User;
 
 public interface CrudService {
 	
+
 	// FIND ALL
 	public List<Customer> findAllCustomer();
 	public List<Product> findAllProduct();

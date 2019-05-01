@@ -29,57 +29,64 @@
 
 
     <!-- Login Form -->
-    <div class="center">
-        <div class="container">
 
-            <!-- Casrd -->
-            <div class="card">
-                <!-- Card Header -->
-                <div class="card-header bg-primary">
-                    <b>LOGIN</b>
+    <div class="container">
+
+
+        <form class="border p-5" th:action="@{/login}" method="POST">
+            <h3 class="text-center">
+                Log In
+            </h3>
+            <hr>
+
+            <div>
+                <div class="alert alert-danger" role="alert" th:if="${param.error}">
+
+                    Invalid username and password.
                 </div>
-                <div class="card-body" style="padding: 25px">
-                    <div>
-                        <div class="alert alert-danger" role="alert" th:if="${param.error}">
-                      
-                            Invalid username and password.
-                        </div>
-                        <div class="alert alert-info" role="alert" th:if="${param.logout}">
-                            You have been logged out.
-                        </div>
-                    </div>
-
-                    <form class="border p-5" th:action="@{/login}" method="POST">
-                        <!-- Username -->
-                        <label for="username">
-                            Username
-                        </label>
-                        <div class="input-group" style="margin-bottom:25px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input class="form-control" type="text" placeholder="Username" name="username">
-                        </div>
-
-                        <!-- Password -->
-                        <label for="password">Password</label>
-                        <div class="input-group" style="margin-bottom:25px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input class="form-control" type="password" placeholder="Password" name="password">
-                        </div>
-                        <div style="text-align: center; margin-bottom: 25px">
-                            <!-- Submit Button -->
-                            <input type="submit" class="btn btn-primary btn-block" value="Login">
-                        </div>
-                    </form>
-
+                <div class="alert alert-info" role="alert" th:if="${param.logout}">
+                    You have been logged out.
                 </div>
-
+            </div>
+            <!-- Username -->
+            <label for="username">
+                Username
+            </label>
+            <div class="input-group" style="margin-bottom:25px">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input class="form-control" type="text" placeholder="Username" name="username">
             </div>
 
+            <!-- Password -->
+            <label for="password">Password</label>
+            <div class="input-group" style="margin-bottom:25px">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input class="form-control" type="password" placeholder="Password" name="password">
+            </div>
+            <div style="text-align: center; margin-bottom: 8px">
+                <!-- Submit Button -->
+                <input type="submit" class="btn btn-primary btn-block" value="Login">
+            </div>
+            <hr/>
+            <div class="text-center">
+                 <small>
+            
+                New here?
+                <a th:href="@{/sign-up}">Sign up</a>
 
-        </div>
+            </small>
+            </div>
+           
+        </form>
+
+
+
 
 
     </div>
+
+
+
 
 
 

@@ -4,12 +4,17 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.business.management.dao.CustomerRepository;
 import com.business.management.dao.ProductRepository;
+import com.business.management.dao.RoleRepository;
+import com.business.management.dao.UserRepository;
 import com.business.management.entity.Customer;
 import com.business.management.entity.Product;
+import com.business.management.entity.Role;
+import com.business.management.entity.User;
 
 @Service
 public class ServiceImpl implements CrudService {
@@ -25,9 +30,10 @@ public class ServiceImpl implements CrudService {
 	 */
 	@Autowired
 	private ProductRepository productRepository;
+	
+
 
 	// FIND ALL
-
 	@Override
 	public List<Customer> findAllCustomer() {
 		return customerRepository.findAll();
