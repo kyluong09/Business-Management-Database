@@ -57,8 +57,13 @@ In order for this application to work, we need to set up a database with MySQL W
 ```
 - Connect MySQL Workbench with root username/password
 - Open SQL script from directory ../Business-Management/sql_script
-- Execute the script
+- Execute the CreateDatabase.sql script
 ```
+Basic Business Schema           |  Authentication Schema
+:-------------------------:|:-------------------------:
+![](sql_script/eer_diagram/business.png)  |  ![](sql_script/eer_diagram/authentication.png)
+
+
 
 
 #### Application Properties
@@ -83,11 +88,13 @@ $ java -jar target/app.jar
 Enter http://localhost:8080 on BROWSER
 ```
 
-```
-There is authentication layer, you need to login with default username/password
-username: admin
-password: password
-```
+There is authentication layer, you can use DEFAULT ``username/password`` that is generated when you execute the ``CreateDatabase.sql script``or manuanlly create a new account on MySQL, use sign up feature
+<image src="images/login.png"/>
+<br/>
+username: ``admin``
+<br>
+password: ``password``
+
 
 
 
