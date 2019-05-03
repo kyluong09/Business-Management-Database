@@ -16,7 +16,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.business.management.entity.User;
 import com.business.management.service.UserService;
-
+/**
+ * 
+ * @author kyluong09
+ *
+ */
 @Controller
 public class AuthController {
 	
@@ -63,7 +67,6 @@ public class AuthController {
 	
 	@PostMapping("/process-sign-up")
 	public String processSignUp(@Valid @ModelAttribute User user, BindingResult bindingResult) {
-		
 		// Return to sign-up page if there's an error
 		// Otherwise save user into database and go back to login page
 		if(bindingResult.hasErrors()) {

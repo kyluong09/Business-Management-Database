@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/dashboard/**").authenticated()
 		.antMatchers("/product/**").authenticated()
 		.antMatchers("/customer/**").authenticated()
-		.antMatchers("/api/**").authenticated()
+		.antMatchers("/api/users").denyAll()
 		.antMatchers("/employees/**").authenticated()
 		.and().exceptionHandling().accessDeniedPage("/access-denied")
 		.and()

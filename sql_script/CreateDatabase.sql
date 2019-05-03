@@ -109,6 +109,16 @@ FOREIGN KEY (`role_id`) REFERENCES `role` (`id`)  ON DELETE NO ACTION ON UPDATE 
 
 )Engine=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO `user`(id,username,password,first_name,last_name,enabled) VALUES
+('1','admin','$2a$04$OFW4/0H9lY2E7UgHNS7mhObaOOnfK4ElXcGLz1O02lqSFLzAJMYWe','admin','db',1);
+INSERT INTO `role` (id,name) VALUES
+('1','USER'),
+('2','ADMIN');
+INSERT INTO `user_role` (user_id,role_id) VALUES
+('1','1'),
+('1','2');
+
+
 
 
 SET FOREIGN_KEY_CHECKS = 1;
