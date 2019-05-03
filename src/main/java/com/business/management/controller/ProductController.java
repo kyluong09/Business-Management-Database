@@ -14,6 +14,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.business.management.entity.Product;
 import com.business.management.service.ServiceImpl;
 
+/**
+ * Product Contorller: /product/**
+ * @author kyluong09
+ *
+ */
 @Controller
 @RequestMapping("product")
 public class ProductController {

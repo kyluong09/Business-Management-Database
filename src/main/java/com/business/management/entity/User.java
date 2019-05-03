@@ -20,11 +20,12 @@ import javax.validation.constraints.Size;
 import com.business.management.validation.FieldMatch;
 import com.business.management.validation.UniqueUsername;
 
+
+@Entity
+@Table(name = "user")
 @FieldMatch.List({
 	@FieldMatch(firstParameter="password", secondParameter="passwordConfirm", message="Password fields need to be matched")
 })
-@Entity
-@Table(name = "user")
 public class User {
 
 	@Id
@@ -138,6 +139,8 @@ public class User {
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
 	}
+	
+	
 
 //	public void addRole(Role role) {
 //		if(roles == null) {

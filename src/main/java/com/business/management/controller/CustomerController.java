@@ -13,7 +13,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.business.management.entity.Address;
 import com.business.management.entity.Customer;
 import com.business.management.service.ServiceImpl;
-
+/**
+ * Customer Controller: /customer/**
+ * @author kyluong09
+ *
+ */
 @Controller
 @RequestMapping("customer")
 public class CustomerController {
