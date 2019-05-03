@@ -3,6 +3,7 @@ package com.business.management.validation;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+import org.jboss.logging.Logger;
 import org.springframework.beans.BeanWrapperImpl;
 /**
  * 
@@ -10,6 +11,7 @@ import org.springframework.beans.BeanWrapperImpl;
  *
  */
 public class FieldMatchConstraint implements ConstraintValidator<FieldMatch, Object> {
+	private Logger log = Logger.getLogger(this.getClass().getName());
 	
 	private String firstParameter;
 	private String secondParameter;
@@ -30,12 +32,17 @@ public class FieldMatchConstraint implements ConstraintValidator<FieldMatch, Obj
 		boolean valid = true;
 		
 		try {
-			Object firstValue = new BeanWrapperImpl(value).getPropertyValue(firstParameter);
-			Object secondValue = new BeanWrapperImpl(value).getPropertyValue(secondParameter);
+			final Object firstValue = new BeanWrapperImpl(value).getPropertyValue(firstParameter);
+			final Object secondValue = new BeanWrapperImpl(value).getPropertyValue(secondParameter);
 			
-            valid =  firstValue == null && secondValue == null || firstValue != null && firstValue.equals(secondValue);
 			
-		}catch(Exception e) {
+            if(!firstValue.equals(secondValue)) {
+            	valid = false;
+            }
+            	
+            
+			
+		}catch(final Exception e) {
 			
 		}
 		

@@ -7,6 +7,7 @@ import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -66,7 +67,9 @@ public class AuthController {
 	
 	
 	@PostMapping("/process-sign-up")
-	public String processSignUp(@Valid @ModelAttribute User user, BindingResult bindingResult) {
+	public String processSignUp(@Valid @ModelAttribute("user") User user, BindingResult bindingResult) {
+
+
 		// Return to sign-up page if there's an error
 		// Otherwise save user into database and go back to login page
 		if(bindingResult.hasErrors()) {
