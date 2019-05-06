@@ -1,6 +1,5 @@
 <h1 style="font-weight:normal">
   Business Management Database
-  <a href="#"><img src=https://img.shields.io/badge/Version-1.1.8-brightgreen.svg></a>
   <a href="https://github.com/kyluong09/Business-Management-Database/blob/master/LICENSE"><img src=https://img.shields.io/github/license/sourcerer-io/sourcerer-app.svg?colorB=ff0000></a>
 </h1>
 
